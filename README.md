@@ -14,11 +14,6 @@ A front-end project focused on recreating a deck of playing cards using modern C
 - **HTML5:** Semantic structure.
 - **CSS3:** Flexbox, Grid, and Absolute Positioning.
 
-## 📸 Preview
-
-![Project Screenshot](./screenshot.png)
-_(Note: Replace this with your actual screenshot file name)_
-
 ## 🧠 What I Learned
 
 During this project, I mastered the difference between:
