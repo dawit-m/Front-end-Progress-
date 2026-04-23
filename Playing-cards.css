@@ -1,0 +1,77 @@
+body {
+  background-color: #DBC4D9;
+  margin: 0;
+  padding: 40px;
+  font-family: 'Georgia', serif;
+}
+
+#playing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+
+.card {
+  position: relative;
+  width: 160px;
+  height: 230px;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #222;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px); 
+}
+
+.red { color: #d10000; }
+.black { color: #000; }
+
+
+.corner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.85;
+}
+
+.left { top: 10px; left: 10px; }
+.right { bottom: 10px; right: 10px; transform: rotate(180deg); }
+
+.corner h2 { margin: 0; font-size: 1.6rem; }
+.corner p { margin: 0; font-size: 1.3rem; }
+
+.middle {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.middle p { margin: 0; font-size: 1.6rem; }
+
+.middle.ace, .middle.face { display: flex; justify-content: center; font-size: 4.5rem; }
+.middle.two { grid-template-rows: 1fr 1fr; }
+.middle.three { grid-template-rows: 1fr 1fr 1fr; }
+
+.middle.four, .middle.six, .middle.eight, .middle.ten,
+.middle.five, .middle.seven, .middle.nine {
+  grid-template-columns: 1fr 1fr;
+}
+
+.middle.five p:nth-child(3), 
+.middle.seven p:nth-child(4), 
+.middle.nine p:nth-child(5) {
+  grid-column: span 2;
+}
+
+.middle.ten p { font-size: 1.2rem; }
